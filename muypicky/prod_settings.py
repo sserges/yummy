@@ -1,6 +1,6 @@
 import dj_database_url
 
-from settings import *
+from settings.base import *
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
