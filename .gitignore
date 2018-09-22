@@ -2,6 +2,8 @@ muypicky/settings/local.py
 muypicky/settings/local2.py
 db.sqlite3
 
+staticfiles
+
 .py[cod]
 
 .DS_Store
