@@ -23,8 +23,8 @@ ALLOWED_HOSTS = [
 
 DATABASES['default'] = dj_database_url.config()
 
-DEBUG = False
-TEMPLATE_DEBUG = False
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
 
