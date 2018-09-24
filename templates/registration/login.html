@@ -33,3 +33,18 @@
 {# Assumes you setup the password_reset view in your URLconf #}
 
 {% endblock %}
+
+{% block js %}
+	<script type="text/javascript">
+		$(function() {
+			$('form p').attr('class', 'form-group');
+			$('input').attr('class', 'form-control');
+			$('[value~="login"]').attr('class', 'form-control btn btn-primary');
+
+			$('.errorlist li').css('list-style', 'none');
+			$('.errorlist li').attr('class', 'text-danger');
+
+			$('.helptext').attr('class', 'help-block');
+		});
+	</script>
+{% endblock %}
