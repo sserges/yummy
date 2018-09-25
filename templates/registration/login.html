@@ -22,11 +22,11 @@
 {% csrf_token %}
 {{ form.as_p }}
 
-<input type="submit" value="login" />
+<input type="submit" value="Login" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
-<p>Need to <a href='{% url "register" %}'>register</a>?</p>
+<p>Need to <a href='{% url "register" %}'>Register</a>?</p>
 </div>
 </div>
 
@@ -38,8 +38,13 @@
 	<script type="text/javascript">
 		$(function() {
 			$('form p').attr('class', 'form-group');
-			$('input').attr('class', 'form-control');
-			$('[value~="login"]').attr('class', 'form-control btn btn-primary');
+			$('input[type!="hidden"]').attr('class', 'form-control');
+			$('[value~="Login"]').attr('class', 'form-control btn btn-primary');
+
+			$('#id_username').attr('placeholder', 'Username');
+			$('#id_password').attr('placeholder', 'Password');
+
+			$('label').hide();
 
 			$('.errorlist li').css('list-style', 'none');
 			$('.errorlist li').attr('class', 'text-danger');

@@ -22,7 +22,7 @@
 	<script type="text/javascript">
 		$(function() {
 			$('form p').attr('class', 'form-group');
-			$('input').attr('class', 'form-control');
+			$('input[type!="hidden"]').attr('class', 'form-control');
 			$('[value~="Register"]').attr('class', 'form-control btn btn-primary');
 
 			$('.errorlist li').css('list-style', 'none');
