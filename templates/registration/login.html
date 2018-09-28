@@ -6,7 +6,7 @@
     <div class='col-sm-6 text-center col-sm-offset-3'>
     <h1>Login</h1>
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<p class="text-danger">Your username and password didn't match. Please try again.</p>
 {% endif %}
 
 {% if next != "/" and next is not None %}
