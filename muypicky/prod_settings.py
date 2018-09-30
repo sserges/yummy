@@ -1,6 +1,15 @@
 import dj_database_url
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 from .settings import *
+
+
+
+sentry_sdk.init(
+    dsn="https://b9cc47781fac4828919a853b89c07e25@sentry.io/1291309",
+    integrations=[DjangoIntegration()]
+)
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
