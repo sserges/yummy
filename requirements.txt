@@ -8,3 +8,4 @@ psycopg2==2.7.3.1
 pytz==2017.2
 whitenoise==3.3.0
 sentry_sdk
+django-extensions
