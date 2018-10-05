@@ -7,7 +7,7 @@ from .settings import *
 
 
 sentry_sdk.init(
-    dsn="https://b9cc47781fac4828919a853b89c07e25@sentry.io/1291309",
+    dsn="https://1c4b7a432cd44f19afa27a1526878cf4@sentry.io/1295264",
     integrations=[DjangoIntegration()]
 )
 
@@ -26,7 +26,7 @@ MANAGERS = ADMINS
 SECRET_KEY = os.environ.get('SECRET_KEY', 'j2b_z(*4w+#)t^nz3)0n3da(tcj&3##klo73m76(x7%3z)b%85n!')
 
 ALLOWED_HOSTS = [
-    'yummy.herokuapp.com',
+    'yum-miam.herokuapp.com',
 ]
 
 
