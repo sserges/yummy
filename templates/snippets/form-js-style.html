@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	$(function() {
+		$('form p').attr('class', 'form-group');
+		$('input[type!="hidden"], textarea, select').attr('class', 'form-control');
+		$('form p:last, [type="checkbox"]').attr('class', 'c');
+		$('[type="submit"]').attr('class', 'form-control btn btn-primary');
+
+		// $('#id_username').attr('placeholder', 'Username');
+		// $('#id_password').attr('placeholder', 'Password');
+
+		// $('label').hide();
+
+		$('.errorlist li').css('list-style', 'none');
+		$('.errorlist li').attr('class', 'text-danger');
+
+		$('.helptext').attr('class', 'help-block');
+
+		$('.container, .row').attr('style', 'margin-bottom: 30px;')
+	});
+</script>

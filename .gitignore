@@ -1,5 +1,5 @@
-muypicky/settings/local.py
-muypicky/settings/local2.py
+yummy/settings/local.py
+yummy/settings/local2.py
 db.sqlite3
 
 staticfiles

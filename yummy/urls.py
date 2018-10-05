@@ -1,12 +1,12 @@
-from django.conf.urls import url, include
+from django.conf.urls import url, include, handler404
 from django.contrib import admin
 from django.views.generic import TemplateView
-
-
 from django.contrib.auth.views import LoginView, LogoutView
 
 from menus.views import HomeView, AllUserRecentItemListView
 from profiles.views import ProfileFollowToggle, RegisterView, activate_user_view
+
+handler404 = 'yummy.views.handler404'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
