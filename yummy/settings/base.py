@@ -23,16 +23,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'j2b_z(*4w+#)t^nz3)0nq(tcj&3##klo73m76(x7%3z)b%85n!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'julygirl018@gmail.com' 
-EMAIL_HOST_PASSWORD = 'JErome83'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' 
+EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'julygirl018@gmail.com'
+DEFAULT_FROM_EMAIL = 'Staff <staff@yummy.com>'
 
 ADMINS = (
     ('You', 'you@email.com'),
@@ -155,5 +155,3 @@ CSRF_COOKIE_SECURE              = False
 SECURE_HSTS_SECONDS             = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 SECURE_FRAME_DENY               = False
-
-
