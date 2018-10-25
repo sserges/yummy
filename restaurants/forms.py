@@ -40,13 +40,3 @@ class RestaurantLocationCreateForm(forms.ModelForm):
             raise forms.ValidationError(f"slug '{slug}' already used")
         return slug
 
-    # def clean_email(self):
-    #     email = self.cleaned_data.get("email")
-    #     if ".edu" in email:
-    #         raise forms.ValidationError("We do not accept edu emails")
-    #     return email
-
-
-
-
-

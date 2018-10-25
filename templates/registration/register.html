@@ -10,27 +10,12 @@
 			{% csrf_token %}
 			{{ form|crispy }}
 
-			<input type="submit" value="Register" />
+			<input type="submit" value="Register" class="btn btn-primary form-control" />
 			<input type="hidden" name="next" value="{{ next }}" />
 		</form>
-		<p>
+		<p style="margin-top: 20px;">
 			Did you need to <a href='{% url "login" %}'>Login</a> ?
 		</p>
 	</div>
 
-{% endblock %}
-
-{% block js %}
-	<script type="text/javascript">
-		// $(function() {
-		// 	$('form p').attr('class', 'form-group');
-		// 	$('input[type!="hidden"]').attr('class', 'form-control');
-		// 	$('[value~="Register"]').attr('class', 'form-control btn btn-primary');
-
-		// 	$('.errorlist li').css('list-style', 'none');
-		// 	$('.errorlist li').attr('class', 'text-danger');
-
-		// 	$('.helptext').attr('class', 'help-block');
-		// });
-	</script>
 {% endblock %}

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'menus',
     'profiles',
     'restaurants',
+    'recipes',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -155,3 +157,16 @@ CSRF_COOKIE_SECURE              = False
 SECURE_HSTS_SECONDS             = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 SECURE_FRAME_DENY               = False
+
+
+# CLOUDINARY
+# CLOUDINARY_URL=cloudinary://694776741596522:tVWMNTrvLAO9Be3TPzN2ujKvLXQ@dd87x7b8g
+
+# cloudinary.config( 
+#   cloud_name = "dd87x7b8g", 
+#   api_key = "694776741596522", 
+#   api_secret = "tVWMNTrvLAO9Be3TPzN2ujKvLXQ" 
+# )
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")

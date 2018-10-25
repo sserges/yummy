@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
   <div class='row'>
@@ -20,36 +22,18 @@
 
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
-{{ form.as_p }}
+{{ form|crispy }}
 
-<input type="submit" value="Login" />
+<input type="submit" value="Login" class="form-control btn btn-primary" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
-<p>Need to <a href='{% url "register" %}'>Register</a>?</p>
+<p style="margin-top: 20px;">
+    Need to <a href='{% url "register" %}'>Register</a>?
+</p>
 </div>
 </div>
 
 {# Assumes you setup the password_reset view in your URLconf #}
 
-{% endblock %}
-
-{% block js %}
-	<!-- <script type="text/javascript">
-		$(function() {
-			$('form p').attr('class', 'form-group');
-			$('input[type!="hidden"]').attr('class', 'form-control');
-			$('[value~="Login"]').attr('class', 'form-control btn btn-primary');
-
-			$('#id_username').attr('placeholder', 'Username');
-			$('#id_password').attr('placeholder', 'Password');
-
-			$('label').hide();
-
-			$('.errorlist li').css('list-style', 'none');
-			$('.errorlist li').attr('class', 'text-danger');
-
-			$('.helptext').attr('class', 'help-block');
-		});
-	</script> -->
 {% endblock %}
