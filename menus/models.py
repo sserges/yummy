@@ -11,6 +11,7 @@ class Item(models.Model):
     # item stuff
     name            = models.CharField(max_length=120)
     contents        = models.TextField(help_text='Separate each item by comma')
+    image           = models.URLField(default='http://col21-delagrange-liernais.ac-dijon.fr/wp-content/uploads/2018/05/cantine-2.jpg')
     excludes        = models.TextField(blank=True, null=True, help_text='Separate each item by comma')
     public          = models.BooleanField(default=True)
     timestamp       = models.DateTimeField(auto_now_add=True)

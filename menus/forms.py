@@ -10,6 +10,7 @@ class ItemForm(forms.ModelForm):
         fields = [
             'restaurant',
             'name',
+            'image',
             'contents',
             'excludes',
             'public'

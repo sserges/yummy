@@ -26,7 +26,8 @@
 {% for rest in locations %}
     <div class='row'>
         <div class='col-sm-12'>
-            <div class='thumbnail'> 
+            <div class='thumbnail'>
+                <!-- <img src='{{ obj.image }}' class='img-responsive' width="400px" height="400px" /> -->
                 <h4>{{ rest.title }}</h4>
                 <p><a href='{{ request.path}}?q={{ rest.location }}'>{{ rest.location }}</a> | 
                 <a href='{{ request.path}}?q= {{ rest.category }}'> {{ rest.category }}</a>
