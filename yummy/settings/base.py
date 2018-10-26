@@ -28,9 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey' 
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST = ''
+EMAIL_HOST_USER = '' 
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'Staff <staff@yummy.com>'
