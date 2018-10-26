@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
 
 from .forms import ItemForm
@@ -16,6 +17,15 @@ class HomeView(View):
         qs = Item.objects.filter(user__id__in=is_following_user_ids, public=True).order_by("-updated")[:3]
         return render(request, "menus/home-feed.html", {'object_list': qs})
 
+@login_required
+def item_detail(request, id):
+    object = get_object_or_404(Item, id=id)
+
+    context = {
+        'object': object
+    }
+
+    return render(request, 'menus/item_detail_public.html', context)
 
 
 class AllUserRecentItemListView(ListView):
@@ -73,4 +83,3 @@ class ItemUpdateView(LoginRequiredMixin, UpdateView):
         kwargs = super(ItemUpdateView, self).get_form_kwargs()
         kwargs['user'] = self.request.user
         return kwargs
-
