@@ -20,7 +20,7 @@
             <p>Restaurant name : {{ object.restaurant.name }}</p>
             <p>Category : {{ object.restaurant.category }}</p>
             {% if object.contents %}
-                Contents
+                Contents : 
                 <ul>    
                     {% for item in object.get_contents %}
                     <li>{{ item }}</li>
@@ -40,7 +40,9 @@
             {% endif %}
 
             <p>
-                <button title="Soon available" class="btn btn-success btn-lg" disabled="disabled">Order It now</button>
+                <button title="Coming soon" class="btn btn-success btn-lg" disabled="disabled">
+                    Order It now
+                </button>
             </p>
         </div>
     </div>
