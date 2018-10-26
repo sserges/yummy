@@ -26,7 +26,10 @@ SECRET_KEY = 'j2b_z(*4w+#)t^nz3)0nq(tcj&3##klo73m76(x7%3z)b%85n!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+]
 
 EMAIL_HOST = ''
 EMAIL_HOST_USER = '' 
