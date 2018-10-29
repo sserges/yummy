@@ -28,8 +28,8 @@ urlpatterns = [
     url(r'^items/', include('menus.urls', namespace='menus')),
     url(r'^recipes/', include('recipes.urls', namespace='recipes')),
     url(r'^restaurants/', include('restaurants.urls', namespace='restaurants')),
-    url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
-    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    # url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
+    # url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
 ]
 
 
